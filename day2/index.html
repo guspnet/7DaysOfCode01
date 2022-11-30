@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>7 Days of Code - Day 2</title>
+</head>
+<body>
+    <h1>Desafio Alura - Day 2</h1>
+    <form>
+        <fieldset>
+            <legend>Forneça seus Dados: </legend>
+            <label for="inome">Digite seu nome: </label>
+            <input type="text" name="nome" id="inome" placeholder="Seu nome"><br>
+            <label for="iidade">Digite sua idade: </label>
+            <input type="number" name="idade" id="iidade" placeholder="Sua idade"><br>
+            <label for="ilinguagem">Linguagem que estuda: </label>
+            <input type="text" name="linguagem" id="ilinguagem" placeholder="Linguagem que estuda">
+            <div class="botao">
+                <a data-botao>Enviar</a>
+            </div>
+        </fieldset>
+
+        <fieldset class="mensagem">
+        </fieldset>
+        <fieldset class="pergunta">
+            <p data-perguntap>Você gosta de estudar essa linguagem?</p>
+            <input type="radio" id="isim" name="resposta" value="sim" data-radio>
+            <label for="isim">Sim</label><br>
+            <input type="radio" id="inao" name="resposta" value="nao" data-radio>
+            <label for="inao">Não</label><br> 
+            <div class="botao">
+                <a data-rbotao>Enviar</a>
+            </div>
+        </fieldset>
+    </form>
+    <script src="main.js"></script>
+</body> 
+</html>

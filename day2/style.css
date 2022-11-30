@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+form {
+    width: 500px;
+}
+
+legend {
+    font-size: 1.5em;
+}
+
+label {
+    font-size: 1.3em;
+    margin-left: 10px;
+}
+
+input {
+    display: inline-block;
+    margin: 10px 0 10px 0;
+}
+
+.botao {
+    margin: 20px 190px;
+}
+
+.botao a {
+    font-size: 1.5em;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.botao a:hover {
+    cursor: pointer;
+}
+
+.mensagem {
+
+    border: none;
+    display: none;
+    width: 470px;
+}
+
+.mensagem p {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.pergunta {
+    display: none;
+}
+
+.pergunta p {
+    font-size: 1.2em;
+}
