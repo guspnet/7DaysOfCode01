@@ -20,26 +20,17 @@ botao.addEventListener("click", () =>{
 
 function gostaDeAprender(linguagem) {
     question.style.display = "block";
-    const rbotao = document.querySelector("[data-rbotao]");
+    const radio = document.querySelectorAll("[data-radio]");
     const pergunta = document.querySelector("[data-perguntap]");
     pergunta.innerText = `Você gosta de estudar ${linguagem}?`;
 
-    rbotao.addEventListener("click", () => {
-        let opcao = "0"
-        const radio = document.querySelectorAll("[data-radio]");
-        radio.forEach(elemento => {
-            if (elemento.checked) {
-                opcao = elemento.value;
+    radio.forEach(elemento => {
+        elemento.addEventListener("click", () => {
+            if(elemento.value == "sim") {
+                caixamsg.innerHTML = "<p>Muito bom! Continue estudando e você terá muito sucesso.</p>"
+            } else {
+                caixamsg.innerHTML = "<p>Ahh que pena... Já tentou aprender outras linguagens?</p>"
             }
         });
-        if(opcao === "0") {
-            alert('Escolha Sim ou Não!')
-        }else {
-            if(opcao === "sim") {
-                caixamsg.innerHTML = "<p>Muito bom! Continue estudando e você terá muito sucesso.</p>";
-            }else {
-                caixamsg.innerHTML = "<p>Ahh que pena... Já tentou aprender outras linguagens?</p>";
-            }
-        }
     });
 }
