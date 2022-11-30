@@ -1,26 +1,34 @@
 const botao = document.querySelector("[data-botao]");
 const caixamsg = document.querySelector(".mensagem");
 const question = document.querySelector(".pergunta");
+const radio = document.querySelectorAll("[data-radio]");
+const reset = document.querySelector("[data-reset]");
+const nome = document.querySelector("#inome");
+const idade = document.querySelector("#iidade");
+const linguagem = document.querySelector("#ilinguagem");
 
 botao.addEventListener("click", () =>{
-
-    const nome = document.querySelector("#inome").value;
-    const idade = document.querySelector("#iidade").value;
-    const linguagem = document.querySelector("#ilinguagem").value;
-
-    if(nome && idade && linguagem) {
+    if(nome.value && idade.value && linguagem.value) {
         caixamsg.style.display = "block";
-        caixamsg.innerHTML = `<p>Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!</p>`
-        gostaDeAprender(linguagem);
+        caixamsg.innerHTML = `<p>Olá ${nome.value}, você tem ${idade.value} anos e já está aprendendo ${linguagem.value}!</p>`
+        gostaDeAprender(linguagem.value);
 
     }else {
         alert("Os dados acima são obrigatórios!")
     }
 });
 
+reset.addEventListener("click", () => {
+    caixamsg.style.display = "none";
+    question.style.display = "none";
+    radio.forEach(element => {element.checked = false});
+    nome.value = ""
+    idade.value = ""
+    linguagem.value = ""
+});
+
 function gostaDeAprender(linguagem) {
     question.style.display = "block";
-    const radio = document.querySelectorAll("[data-radio]");
     const pergunta = document.querySelector("[data-perguntap]");
     pergunta.innerText = `Você gosta de estudar ${linguagem}?`;
 
