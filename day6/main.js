@@ -16,6 +16,8 @@ do{
         resposta = prompt(`Deseja adicionar um ítem na lista de compras? Digite sim ou não?\n Para remover algum ítem, digite "remover".`);
         if(resposta === "remover") {
             alert(`Lista Atual:\n  Frutas: ${frutas}\n  Laticínios: ${laticinios}\n  Doces: ${doces}\n  Congelados: ${congelados}\n  Legumes: ${legumes}\n  Perfumaria: ${perfumaria}`);
+            item = "";
+            categoria = "";
             while(item == "") {
                 item = prompt("Qual ítem deseja remover?");
                 if(item != ""){
@@ -35,8 +37,8 @@ do{
                                 refarray = legumes;
                                 break;
                             case "congelados":
-                                indice = congelado.indexOf(item);
-                                refarray = congelado;
+                                indice = congelados.indexOf(item);
+                                refarray = congelados;
                                 break;
                             case "doces":
                                 indice = doces.indexOf(item);
