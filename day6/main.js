@@ -46,36 +46,6 @@ do{
         }
         if(resposta === "não") {
             console.log("Lista Finalizada!");
-            console.log("Lista de frutas: ");
-            for(let i in frutas) {
-                console.log(frutas[i]);
-            }
-
-            console.log("Lista de laticínios: ");
-            for(let i in laticinios) {
-                console.log(laticinios[i]);
-            }
-
-            console.log("Lista de legumes: ");
-            for(let i in legumes) {
-                console.log(legumes[i]);
-            }
-
-            console.log("Lista de congelados: ");
-            for(let i in congelados) {
-                console.log(congelados[i]);
-            }
-
-            console.log("Lista de doces: ");
-            for(let i in doces) {
-                console.log(doces[i]);
-            }
-
-            console.log("Lista de perfumaria: ");
-            for(let i in perfumaria) {
-                console.log(perfumaria[i]);
-            }
-            
             flag = 1;
             break;
         }
@@ -85,3 +55,4 @@ do{
     item = "";
     categoria = "";
 }while(!flag);
+alert(`Lista de compras:\n  Frutas: ${frutas}\n  Laticínios: ${laticinios}\n  Doces: ${doces}\n  Congelados: ${congelados}\n  Legumes: ${legumes}\n  Perfumaria: ${perfumaria}`);
